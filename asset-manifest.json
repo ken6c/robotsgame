@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/robotsgame/static/css/main.41aeff18.chunk.css",
+    "main.js": "/robotsgame/static/js/main.e491422a.chunk.js",
+    "main.js.map": "/robotsgame/static/js/main.e491422a.chunk.js.map",
+    "runtime-main.js": "/robotsgame/static/js/runtime-main.f1f821a4.js",
+    "runtime-main.js.map": "/robotsgame/static/js/runtime-main.f1f821a4.js.map",
+    "static/css/2.31461e4f.chunk.css": "/robotsgame/static/css/2.31461e4f.chunk.css",
+    "static/js/2.8530047f.chunk.js": "/robotsgame/static/js/2.8530047f.chunk.js",
+    "static/js/2.8530047f.chunk.js.map": "/robotsgame/static/js/2.8530047f.chunk.js.map",
+    "static/js/3.953a85ae.chunk.js": "/robotsgame/static/js/3.953a85ae.chunk.js",
+    "static/js/3.953a85ae.chunk.js.map": "/robotsgame/static/js/3.953a85ae.chunk.js.map",
+    "index.html": "/robotsgame/index.html",
+    "static/css/2.31461e4f.chunk.css.map": "/robotsgame/static/css/2.31461e4f.chunk.css.map",
+    "static/css/main.41aeff18.chunk.css.map": "/robotsgame/static/css/main.41aeff18.chunk.css.map",
+    "static/js/2.8530047f.chunk.js.LICENSE.txt": "/robotsgame/static/js/2.8530047f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/robotsgame/static/media/SEGA.47b4bfa9.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f1f821a4.js",
+    "static/css/2.31461e4f.chunk.css",
+    "static/js/2.8530047f.chunk.js",
+    "static/css/main.41aeff18.chunk.css",
+    "static/js/main.e491422a.chunk.js"
+  ]
+}
