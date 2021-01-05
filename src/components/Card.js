@@ -9,7 +9,7 @@ const Card = ({ id,name }) => {
             <img src={`https://robohash.org/${ id }?200x200`} alt="robot" />
             <div>
                 <h3>{ name }</h3>
-                <p><a href="#" class="button-link">Challenge Me</a></p>
+                <p><a href="#" className="button-link">Challenge Me</a></p>
 
             </div>
         </div>

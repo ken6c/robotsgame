@@ -3,8 +3,8 @@ import React from 'react';
 function NavBar({ howToPlay,gameRules,login,register,logout,userName }) {
     return (
         <div >
-            <nav id="clnav" class=" flex justify-between">
-                <ul class="flex ">
+            <nav id="clnav" className=" flex justify-between">
+                <ul className="flex ">
                     <li>
                         <a href={ howToPlay } >How To Play</a>
                     </li>
@@ -13,7 +13,7 @@ function NavBar({ howToPlay,gameRules,login,register,logout,userName }) {
                     </li>
                 </ul>
 
-                <ul class="flex">
+                <ul className="flex">
                     {/* <li>
                         <a href="" class="p-3">{ userName }</a>
                     </li>
