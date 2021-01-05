@@ -4,3 +4,55 @@ body {
   font-family: sans-serif;
   background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
 }
+#clnav {
+  background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+  padding: 0px;
+}
+
+
+#clnav a {
+  text-decoration: none;
+  color: #fff;
+}
+#clnav li {
+  font-family: sans-serif;
+  font-weight: 10;
+  color: #fff;
+  margin: 20px;
+  display: inline-block;
+}
+
+#performance a {
+  text-decoration: none;
+  color: #000;
+}
+
+#performance li{
+  font-family: sans-serif;
+  font-weight: 10;
+  color: #fff;
+  margin: 5px;
+  display: inline-block;
+  
+}
+#performance {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,243,93,0.3654412448573179) 0%, rgba(0,212,255,1) 100%);
+  padding: 0px;
+  margin: 0px;
+}
+
+.button-link {
+  background-color: #c2d500;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 15px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+}
+
+.button-link:hover {
+  background-color: #85bd04;
+  text-decoration: none;
+}

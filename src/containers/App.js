@@ -1,12 +1,34 @@
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import Searchbox from '../components/Searchbox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
+import NavBar from '../components/NavBar';
 import 'tachyons';
 import './App.css';
 
+import {setSearchField} from '../actions';
+
+//What piece of state  we need to listen to and send it to props searchFied
+const mapStateToProps = state => {
+    return {
+        //we create the store with the searchRobots reducer
+        searchField: state.searchField
+    }
+}
+// in order to send the action we need a dispatch it
+// what pops I need to listen to for the action to get dispatched
+const  mapDispatchToProps = (dispatch) => {
+    return {
+        // when the event onSearchChange occurs we return a function that executes 
+        // an action setSearchField with the parameter received
+        // from the ocurred event which can be obptained by event.target.value 
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+    }
+    
+}
 
 class App extends Component {
  
@@ -14,7 +36,6 @@ class App extends Component {
         super()
         this.state = {
             robots: [],
-            searchfield: ''
         }
     }
 
@@ -24,20 +45,18 @@ class App extends Component {
         .then(users => this.setState({robots: users}));
     }
 
-    onSearchChange = (event) => {
-        this.setState({searchfield: event.target.value})
-    }
-
     render() {
-        const { robots, searchfield } = this.state;
+        const { robots } = this.state;
+        const { searchField, onSearchChange } = this.props;
         const filteredRobots = robots.filter(robot => {
-            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+            return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
         return !robots.length ? (<h1>Loading...</h1>) : 
             (
                 <div className="tc">
-                    <h1> RobotFriends</h1> 
-                    <Searchbox searchChange = {this.onSearchChange} /> 
+                    <NavBar />
+                    <h1> RobotsGame</h1> 
+                    <Searchbox searchChange = {onSearchChange} /> 
                     <Scroll>
                         <ErrorBoundry>
                             <CardList robots = {filteredRobots} />
@@ -48,4 +67,4 @@ class App extends Component {
         
     }
 }
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
