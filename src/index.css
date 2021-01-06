@@ -31,8 +31,11 @@ body {
   font-family: sans-serif;
   font-weight: 10;
   color: #fff;
-  margin: 5px;
+  margin: 2px;
   display: inline-block;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  padding: 2px 7px;
   
 }
 #performance {
@@ -45,14 +48,106 @@ body {
   background-color: #c2d500;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 10px 15px;
+  padding: 6px 12px;
   position: relative;
   display: inline-block;
   text-decoration: none;
   text-align: left;
+  border-radius: 3px;
 }
 
+.connect-link {
+  background-color: #4b2b7e;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 6px 12px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 3px;
+}
+
+.chat-link {
+  background-color: #f36541;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 6px 12px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 3px;
+}
+
+.top-robots a {
+  background-color: #fc0505;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 6px 14px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.top-followed-robots a {
+  background-color: #4c44b9;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 8px 17px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.action-bar li {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  margin: 15px;
+}
+
+.button-action li {
+
+  padding: 2px 3px;
+  position: relative;
+  display: inline-block;
+  
+}
 .button-link:hover {
   background-color: #85bd04;
   text-decoration: none;
+}
+
+.connect-link:hover {
+  background-color: #775bdb;
+  text-decoration: none;
+}
+
+.chat-link:hover {
+  background-color: #fc0d05;
+  text-decoration: none;
+}
+
+.top-robots a :hover {
+  background-color: #a33835;
+  text-decoration: none;
+}
+
+.top-followed-robots a :hover {
+  background-color: #4543cc;
+  text-decoration: none;
+}
+
+#list {
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 20px;
 }

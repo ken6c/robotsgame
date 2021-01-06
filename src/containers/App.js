@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import Searchbox from '../components/Searchbox';
+import TopRobots from '../components/TopRobots';
+import TopFollowedRobots from '../components/TopFollowedRobots';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import NavBar from '../components/NavBar';
@@ -15,7 +17,10 @@ import {setSearchField} from '../actions';
 const mapStateToProps = state => {
     return {
         //we create the store with the searchRobots reducer
-        searchField: state.searchField
+        searchField: state.searchRobots.searchField,
+        robots: state.requestRobots.robots,
+        isPending: state.requestRobots.isPending,
+        error: state.requestRobots.error
     }
 }
 // in order to send the action we need a dispatch it
@@ -56,7 +61,11 @@ class App extends Component {
                 <div className="tc">
                     <NavBar />
                     <h1> RobotsGame</h1> 
-                    <Searchbox searchChange = {onSearchChange} /> 
+                    <ul className="action-bar">
+                        <li><TopFollowedRobots /></li>
+                        <li><Searchbox searchChange = {onSearchChange} /></li> 
+                        <li><TopRobots /></li>
+                    </ul>
                     <Scroll>
                         <ErrorBoundry>
                             <CardList robots = {filteredRobots} />
