@@ -8,6 +8,7 @@ import TopFollowedRobots from '../components/TopFollowedRobots';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import NavBar from '../components/NavBar';
+import RobotClick from '../components/games/RobotClick';
 import 'tachyons';
 import './App.css';
 
@@ -61,6 +62,7 @@ class App extends Component {
                 <div className="tc">
                     <NavBar />
                     <h1> RobotsGame</h1> 
+                    < RobotClick />
                     <ul className="action-bar">
                         <li><TopFollowedRobots /></li>
                         <li><Searchbox searchChange = {onSearchChange} /></li> 

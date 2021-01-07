@@ -92,6 +92,17 @@ body {
   border-radius: 5px;
 }
 
+.robot-click-button button {
+  background-color: #fc0505;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 6px 14px;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
 .top-followed-robots a {
   background-color: #4c44b9;
   text-transform: uppercase;
