@@ -5,10 +5,12 @@ import CardList from '../components/CardList';
 import Searchbox from '../components/Searchbox';
 import TopRobots from '../components/TopRobots';
 import TopFollowedRobots from '../components/TopFollowedRobots';
-import Scroll from '../components/Scroll';
-import ErrorBoundry from '../components/ErrorBoundry';
+
+import ErrorBoundary from '../components/ErrorBoundary';
 import NavBar from '../components/NavBar';
-import RobotClick from '../components/games/RobotClick';
+import RobotClick from '../components/games/robotclick/RobotClick';
+import Game from '../components/games/robotsfire/Game';
+import Scroll from '../components/Scroll';
 import 'tachyons';
 import './App.css';
 
@@ -61,17 +63,24 @@ class App extends Component {
             (
                 <div className="tc">
                     <NavBar />
-                    <h1> RobotsGame</h1> 
-                    < RobotClick />
+                    <h1> RobotsGame</h1>                     
                     <ul className="action-bar">
                         <li><TopFollowedRobots /></li>
                         <li><Searchbox searchChange = {onSearchChange} /></li> 
                         <li><TopRobots /></li>
                     </ul>
+                    <ul className="action-bar">
+                        <li>< RobotClick /></li>
+                        <li>
+                            <ErrorBoundary>
+                                < Game />
+                            </ErrorBoundary>
+                        </li>
+                    </ul>                    
                     <Scroll>
-                        <ErrorBoundry>
+                        <ErrorBoundary>
                             <CardList robots = {filteredRobots} />
-                        </ErrorBoundry>
+                        </ErrorBoundary>
                     </Scroll>
                 </div>
             );
